@@ -14,32 +14,37 @@
 
 
 from math import floor
+arr = []
+arr_last_index = []
 
-arr1 = [1, 3, 5, 7]
+arr1 = [1, 3, 5, 7, 22, 35]
 arr2 = [10, 20, 30, 40]
 arr3 = [2, 4, 6, 8]
+arr4 = [100]
 
-total_length = len(arr1) + len(arr2) + len(arr3)
+arr.append(arr1)
+arr.append(arr2)
+arr.append(arr3)
+arr.append(arr4)
 
-arr1_last_index = 0
-arr2_last_index = 0
-arr3_last_index = 0
+total_length = 0
+
+for i in range(len(arr)):
+    arr_last_index.append(0)
+    total_length += len(arr[i])
 
 final_list = []
 
-print(total_length)
 # todos con 4 elementos
 for i in range(total_length):
+    min_num_list = []
+    for j in range(len(arr)):
+        if len(arr[j]) != arr_last_index[j]:
+            min_num_list.append(arr[j][arr_last_index[j]])
+    min_num = min(min_num_list)
+    for j in range(len(arr)):
+        if len(arr[j]) > arr_last_index[j] and min_num == arr[j][arr_last_index[j]]:
+            if arr_last_index[j] < len(arr[j]): arr_last_index[j] += 1
+    final_list.append(min_num)
 
-    if ((arr1_last_index < 4 and arr2_last_index < 4) and (arr1[arr1_last_index] < arr2[arr2_last_index])) and ( arr3_last_index < 4 and (arr1[arr1_last_index] < arr3[arr3_last_index])):
-        final_list.append(arr1[arr1_last_index])
-        arr1_last_index += 1
-    elif ((arr2_last_index < 4 and arr1_last_index < 4) and (arr2[arr2_last_index] < arr1[arr1_last_index])) and (arr3_last_index < 4 and (arr2[arr2_last_index] < arr3[arr3_last_index])):
-        final_list.append(arr2[arr2_last_index])
-        arr2_last_index += 1
-    elif ((arr3_last_index < 4 and arr1_last_index < 4) and (arr3[arr3_last_index] < arr1[arr1_last_index])) and  (arr2_last_index < 4 and (arr3[arr3_last_index] < arr2[arr2_last_index])):
-        final_list.append(arr3[arr3_last_index])
-        arr3_last_index += 1
 
-
-print(final_list)
