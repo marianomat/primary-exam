@@ -9,7 +9,7 @@
       <working-dir>$ProjectFileDir$</working-dir>
     </data-source>
     <data-source source="LOCAL" name="aeropuerto" uuid="9b6327ab-745c-4060-b44f-9debb310a44b">
-      <driver-ref>sqlite.xerial</driver-ref>
+      <driver-ref>dcbe59dd-e0a3-48f4-ae01-a87daf4c85a9</driver-ref>
       <synchronize>true</synchronize>
       <jdbc-driver>org.sqlite.JDBC</jdbc-driver>
       <jdbc-url>jdbc:sqlite:C:\Users\mpereyra\Desktop\Repos\primary-exam\sql\aeropuerto.db</jdbc-url>
@@ -21,7 +21,7 @@
       </libraries>
     </data-source>
     <data-source source="LOCAL" name="aeropuerto2" uuid="2598c478-9c90-4426-92c6-7929a90356c2">
-      <driver-ref>sqlite.xerial</driver-ref>
+      <driver-ref>dcbe59dd-e0a3-48f4-ae01-a87daf4c85a9</driver-ref>
       <synchronize>true</synchronize>
       <jdbc-driver>org.sqlite.JDBC</jdbc-driver>
       <jdbc-url>jdbc:sqlite:C:\Users\mpereyra\Desktop\Repos\primary-exam\sql\aeropuerto2.db</jdbc-url>
@@ -29,6 +29,25 @@
       <libraries>
         <library>
           <url>file://$APPLICATION_CONFIG_DIR$/jdbc-drivers/Xerial SQLiteJDBC/3.38.0/sqlite-jdbc-3.38.0.jar</url>
+        </library>
+      </libraries>
+    </data-source>
+    <data-source source="LOCAL" name="identifier.sqlite" uuid="6acf2ae6-ca62-432f-b05c-6d9f7f3672e3">
+      <driver-ref>sqlite.xerial</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>org.sqlite.JDBC</jdbc-driver>
+      <jdbc-url>jdbc:sqlite:identifier.sqlite</jdbc-url>
+      <working-dir>$ProjectFileDir$</working-dir>
+    </data-source>
+    <data-source source="LOCAL" name="aeropuerto3" uuid="3e9b0763-8795-4113-8c1b-8c468f186ced">
+      <driver-ref>sqlite.xerial</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>org.sqlite.JDBC</jdbc-driver>
+      <jdbc-url>jdbc:sqlite:C:\Users\maria\Desktop\repos\primary_exam\sql\aeropuerto3.db</jdbc-url>
+      <working-dir>$ProjectFileDir$</working-dir>
+      <libraries>
+        <library>
+          <url>file://$APPLICATION_CONFIG_DIR$/jdbc-drivers/Xerial SQLiteJDBC/3.34.0/sqlite-jdbc-3.34.0.jar</url>
         </library>
       </libraries>
     </data-source>
