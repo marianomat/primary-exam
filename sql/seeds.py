@@ -1,10 +1,5 @@
 import random
 
-from faker import Faker
-
-faker = Faker()
-
-
 def get_personas():
     return personas
 

@@ -53,3 +53,31 @@ for i in range(total_length - 1):
 f = open("output.txt", "a")
 f.write(str(final_list))
 f.close()
+
+
+
+## Preguntas extra
+
+# 1) ¿Qué es y para qué sirve una clase abstracta? ¿Qué es herencia múltiple?
+# Una clase abstracta es una clase que no se instancia por sí sola, sino que es instanciada mediante sus clases hijas.
+# Sirve para:
+#   1: Obligar la implementación de métodos abstractos en las clases hijas
+#   2: Usar como estructura base para objetos que compartan propiedades. Ejemplo: clase abstracta Persona, donde es padre de Empleado y Cliente.
+# Ambas comparten atributos como DNI, nombre pero por cuestiones de diseño se decide que nunca se instancia un objeto Persona directamente.
+# Herencia multiple consiste en que una clase pueda extender de multiples clases, esto en algunos lenguajes como Java no se permite pero en Python si.
+# implementacion en Python:
+# class DerivedClassName(Base1, Base2, Base3):
+#     <statement-1>
+#     .
+#     .
+#     .
+#     <statement-N>
+# https://docs.python.org/3/tutorial/classes.html#multiple-inheritance
+
+# Los metodos publicos son funcionalidades que posee una clase los cuales pueden ser invocadas desde afuera del scope de la clase, por ejemplo en otra clase.
+# Un metodo privado es aquel que solo peude ser llamado en la clase en la que se define
+# En python no existen distinciones entre private y public, entonces para indicar que algo private se utiliza un "_" adelante del metodo o atributo.
+# Para que el desarrollador sepa que se debe utilizar dentro de la clase.
+
+
+

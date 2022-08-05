@@ -2,7 +2,7 @@ import sqlite3
 import sql.seeds as seeds
 
 # Creamos la conexión con la DB, si no existe la crea
-conn = sqlite3.connect("aeropuerto3.db")
+conn = sqlite3.connect("aeropuerto4.db")
 
 # Creamos el objeto cursor
 cursor = conn.cursor()
@@ -67,7 +67,7 @@ cursor.execute("DELETE FROM vuelo WHERE vuelonro = 2")
 # esta certificado en Boeing y otro tipo de avión no debe estar incluido en el resultado)”
 
 query = cursor.execute(
-    "SELECT enombre FROM empleado INNER JOIN certificado c2 on empleado.eid = c2.eid WHERE empleado.eid NOT IN (SELECT e.eid as rango FROM empleado e INNER JOIN certificado c on e.eid = c.eid INNER JOIN aeronave a on a.aid = c.aid WHERE a.rango < 5000 and a.anombre NOT LIKE '%Boeing%')")
+    "SELECT enombre FROM empleado INNER JOIN certificado c2 on empleado.eid = c2.eid WHERE empleado.eid NOT IN (SELECT e.eid as rango FROM empleado e INNER JOIN certificado c on e.eid = c.eid INNER JOIN aeronave a on a.aid = c.aid WHERE a.rango < 5000 or a.anombre NOT LIKE '%Boeing%')")
 
 print("Respuesta query")
 print("El unico empleado que cumple la condicion es el (eid=3, aid=3) Carrie Wood")
