@@ -1,14 +1,16 @@
+from clases_y_herencia.classes.Activo import Activo
 from clases_y_herencia.classes.Vehiculo import Vehiculo
 
 
-class Automovil(Vehiculo):
-    def __init__(self, puertas, marca, color, velocidad):
-        super().__init__(color, velocidad)
+class Automovil(Activo, Vehiculo):
+    def __init__(self, puertas, marca, color, velocidad, valor, anios_amortizacion):
+        Activo.__init__(self, valor, anios_amortizacion)
+        Vehiculo.__init__(self, color, velocidad)
         self._puertas = puertas
         self._marca = marca
 
     def __str__(self) -> str:
-           return f"Automóvil de {self.get_puertas()} puertas, marca {self.get_marca()}, color {self.get_color()}, velocidad {self.get_velocidad()}"
+           return f"Automóvil de {self.get_puertas()} puertas, marca {self.get_marca()}, color {self.get_color()}, velocidad {self.get_velocidad()}, con un valor de ${self.get_valor()} y un periodo amortizable de {self.get_anios_amortizacion()}"
 
     def __eq__(self, obj):
         # checking both objects of same class
@@ -20,7 +22,7 @@ class Automovil(Vehiculo):
 
     @classmethod
     def crear_automovil(cls):
-        return Automovil(4, "Peugeot", "Rojo", 170)
+        return Automovil(4, "Peugeot", "Rojo", 170, 600000, "5 años")
 
     def get_puertas(self):
         return self._puertas

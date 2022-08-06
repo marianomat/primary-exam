@@ -2,7 +2,7 @@ import sqlite3
 import sql.seeds as seeds
 
 # Creamos la conexión con la DB, si no existe la crea
-conn = sqlite3.connect("aeropuerto4.db")
+conn = sqlite3.connect("aeropuerto.db")
 
 # Creamos el objeto cursor
 cursor = conn.cursor()
