@@ -49,6 +49,7 @@ for i in range(total_length):
             if arr_last_index[j] < len(arr[j]):
                 arr_last_index[j] += 1
                 break
+
     final_list.append(min_num)
 
 # Escribir archivo con lista final
